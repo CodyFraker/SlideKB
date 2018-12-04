@@ -8,7 +8,7 @@ namespace SliderConsole
 {
     public class Port
     {
-        public string portName = string.Empty; // SlideKB USB Port
-        public int baudRate = 115200; // Default Baud Rate set by SlideKB
+        public static string portName = string.Empty; // SlideKB USB Port
+        public static int baudRate = 115200; // Default Baud Rate set by SlideKB
     }
 }

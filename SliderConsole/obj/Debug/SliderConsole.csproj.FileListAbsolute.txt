@@ -9,3 +9,14 @@ C:\Users\Cody\Source\Repos\SliderConsole\SliderConsole\bin\Debug\SliderConsole.p
 C:\Users\Cody\Source\Repos\SliderConsole\SliderConsole\obj\Debug\SliderConsole.exe
 C:\Users\Cody\Source\Repos\SliderConsole\SliderConsole\obj\Debug\SliderConsole.pdb
 C:\Users\Cody\Source\Repos\SliderConsole\SliderConsole\obj\Debug\SliderConsole.Setup.resources
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\bin\Debug\SliderConsole.exe.config
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\bin\Debug\SliderConsole.exe
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\bin\Debug\SliderConsole.pdb
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.csprojAssemblyReference.cache
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.Form1.resources
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.Properties.Resources.resources
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.Setup.resources
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.csproj.GenerateResource.cache
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.csproj.CoreCompileInputs.cache
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.exe
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.pdb

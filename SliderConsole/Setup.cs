@@ -33,21 +33,25 @@ namespace SliderConsole
             }
             else
             {
-                Port portData = new Port();
-                portData.portName = comboBox1.Items[item].ToString();
+                
+                Port.portName = comboBox1.Items[item].ToString();
 
                 if (Baud115Radio.Checked == true)
                 {
-                    portData.baudRate = 115200;
+                    Port.baudRate = 115200;
                 }
                 else if (Baud9600Radio.Checked == true)
                 {
-                    portData.baudRate = 9600;
+                    Port.baudRate = 9600;
                 }
                 else
                 {
                     MessageBox.Show("Please select a baud rate!");
                 }
+
+                Form1 main = new Form1();
+                main.Show();
+                this.Hide();
             }
             
         }

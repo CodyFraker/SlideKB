@@ -16,10 +16,12 @@ namespace SliderConsole
         public Form1()
         {
             InitializeComponent();
-            serialPort1.BaudRate = 115200;
-            serialPort1.PortName = "COM7";
+            serialPort1.BaudRate = Port.baudRate;
+            serialPort1.PortName = Port.portName;
             serialPort1.Open();
             serialPort1.DataReceived += SerialPort1_DataReceived;
+            comport_label.Text = Port.portName; // Sets the port name Label
+            baudrate_label.Text = Port.baudRate.ToString(); // Sets the baud rate label
         }
 
         private void SerialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
@@ -38,6 +40,11 @@ namespace SliderConsole
             progressBar1.Value = curentValue;
             sliderVal.Text = curentValue.ToString();
             richTextBox1.AppendText(input);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
         }
     }
 }
