@@ -16,42 +16,51 @@ namespace SliderConsole
         public Setup()
         {
             InitializeComponent();
-            string[] ports = SerialPort.GetPortNames();
+            string[] ports = SerialPort.GetPortNames(); // Gets port names of all used ports
 
             foreach (string port in ports)
             {
-                comboBox1.Items.Add(port);
+                comboBox1.Items.Add(port); // Adds all port names to the dropdown menu
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int item = comboBox1.SelectedIndex;
+            int item = comboBox1.SelectedIndex; // Takes the selected item from the dropdown menu
             if (item == -1) // Occurs when a user is fails to select a proper COM port.
             {
                 MessageBox.Show("Please select a COM port occupied by the slider!");
             }
             else
             {
-                
-                Port.portName = comboBox1.Items[item].ToString();
+                Slider slider1 = new Slider();
+                slider1.portName = comboBox1.Items[item].ToString(); // Sets port name from dropdown
 
                 if (Baud115Radio.Checked == true)
                 {
-                    Port.baudRate = 115200;
+                    slider1.baudRate = 115200;
                 }
                 else if (Baud9600Radio.Checked == true)
                 {
-                    Port.baudRate = 9600;
+                    slider1.baudRate = 9600;
                 }
                 else
                 {
                     MessageBox.Show("Please select a baud rate!");
                 }
+                try
+                {
+                    slider1.initialize();
+                    Form1 form1 = new Form1(slider1);
+                    this.Hide(); // Close this window for now
+                    form1.Show();
+                }
+                catch (Exception e1)
+                {
 
-                Form1 main = new Form1();
-                main.Show();
-                this.Hide();
+
+                }
+                
             }
             
         }
