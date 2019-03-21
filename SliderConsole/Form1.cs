@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using AudioSwitcher;
+using AudioSwitcher.AudioApi.CoreAudio;
 
 namespace SliderConsole
 {
     public partial class Form1 : Form
     {
         Slider slide1;
+        CoreAudioDevice playbackDevice = new CoreAudioController().DefaultPlaybackDevice;
         public Form1(Slider slider)
         {
             InitializeComponent();
@@ -44,6 +47,12 @@ namespace SliderConsole
                 int curentValue = 0;
                 curentValue = int.Parse(input);
                 progressBar1.Value = curentValue;
+                double sliderPercent = (Convert.ToDouble(curentValue) / 1022.00) * 100.00;
+                sliderVal100.Text = sliderPercent.ToString();
+            if(checkBox1.Checked == true)
+            {
+                playbackDevice.SetVolumeAsync(sliderPercent);
+            }
                 sliderVal.Text = curentValue.ToString();
                 richTextBox1.AppendText(input);
         }
@@ -107,6 +116,19 @@ namespace SliderConsole
         private void button3_Click_1(object sender, EventArgs e)
         {
             slide1.serial.Write($"1024]");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CoreAudioDevice playbackDevice = new CoreAudioController().DefaultPlaybackDevice;
+            richTextBox1.Text = ($"Current Volume: {playbackDevice.Volume}");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CoreAudioDevice playbackDevice = new CoreAudioController().DefaultPlaybackDevice;
+            playbackDevice.SetVolumeAsync(50);
+            richTextBox1.Text = "Set volume to 50";
         }
     }
 }

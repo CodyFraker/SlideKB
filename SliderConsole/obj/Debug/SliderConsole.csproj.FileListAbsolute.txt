@@ -20,3 +20,6 @@ C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.csp
 C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.csproj.CoreCompileInputs.cache
 C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.exe
 C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.pdb
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\bin\Debug\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\bin\Debug\AudioSwitcher.AudioApi.dll
+C:\Users\Cody\Documents\GitHub\SlideKB\SliderConsole\obj\Debug\SliderConsole.csproj.CopyComplete
