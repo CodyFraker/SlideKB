@@ -115,20 +115,40 @@ namespace SliderConsole
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            slide1.serial.Write($"1024]");
+            slide1.serial.Write($"1024]");  // Set slider's position to home.
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CoreAudioDevice playbackDevice = new CoreAudioController().DefaultPlaybackDevice;
             richTextBox1.Text = ($"Current Volume: {playbackDevice.Volume}");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            CoreAudioDevice playbackDevice = new CoreAudioController().DefaultPlaybackDevice;
             playbackDevice.SetVolumeAsync(50);
             richTextBox1.Text = "Set volume to 50";
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                richTextBox1.Text = "";
+                richTextBox1.AppendText("Syncing slider position with volume.");
+                richTextBox1.Text = ($"Current Volume: {playbackDevice.Volume}");
+
+                slide1.serial.Write($"1024]");  // Set slider's position to home.
+
+                double vol = (Convert.ToDouble(playbackDevice) / 100.00) * 1022.00; // Convert volume to 0-1022
+
+                slide1.serial.Write($"{vol}"); //Set slider's position to the match the master volume. 
+
+            }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
