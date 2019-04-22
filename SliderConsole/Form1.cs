@@ -138,8 +138,7 @@ namespace SliderConsole
                 richTextBox1.Text = ($"Current Volume: {playbackDevice.Volume}");
 
                 slide1.serial.Write($"1024]");  // Set slider's position to home.
-
-                double vol = (Convert.ToDouble(playbackDevice) / 100.00) * 1022.00; // Convert volume to 0-1022
+                double vol = (Convert.ToDouble(playbackDevice.Volume) / 100.00) * 1022.00; // Convert volume to 0-1022
 
                 slide1.serial.Write($"{vol}"); //Set slider's position to the match the master volume. 
 
