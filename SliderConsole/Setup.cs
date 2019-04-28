@@ -64,5 +64,21 @@ namespace SliderConsole
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] ports = SerialPort.GetPortNames(); // Gets port names of all used ports
+
+            for(int i=0; i <= comboBox1.Items.Count; i++)
+            {
+                comboBox1.Items.RemoveAt(0);
+            }
+            foreach (string port in ports)
+            {
+                comboBox1.Items.Add(port); // Adds all port names to the dropdown menu
+            }
+            comboBox1.SelectedItem = null;
+            comboBox1.SelectedText = string.Empty;
+        }
     }
 }

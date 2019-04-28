@@ -24,7 +24,7 @@ namespace SliderConsole
 
             try
             {
-                label5.Text = slide1.Id;
+                sliderNameLabel.Text = slide1.Id;
 
             }
             catch(System.UnauthorizedAccessException e1)
@@ -139,8 +139,8 @@ namespace SliderConsole
 
                 slide1.serial.Write($"1024]");  // Set slider's position to home.
                 double vol = (Convert.ToDouble(playbackDevice.Volume) / 100.00) * 1022.00; // Convert volume to 0-1022
-
-                slide1.serial.Write($"{vol}"); //Set slider's position to the match the master volume. 
+                richTextBox1.AppendText($"VOLUME TO SEND TO SLIDER: {vol}");
+                slide1.serial.Write($"{vol}]"); //Set slider's position to the match the master volume. 
 
             }
         }

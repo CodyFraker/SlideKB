@@ -47,15 +47,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comport_label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.sliderNameLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -90,7 +90,7 @@
             // sliderVal100
             // 
             this.sliderVal100.AutoSize = true;
-            this.sliderVal100.Location = new System.Drawing.Point(200, 35);
+            this.sliderVal100.Location = new System.Drawing.Point(165, 35);
             this.sliderVal100.Name = "sliderVal100";
             this.sliderVal100.Size = new System.Drawing.Size(16, 17);
             this.sliderVal100.TabIndex = 18;
@@ -99,7 +99,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(156, 35);
+            this.label10.Location = new System.Drawing.Point(121, 35);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 17);
             this.label10.TabIndex = 17;
@@ -167,7 +167,7 @@
             // sliderVal
             // 
             this.sliderVal.AutoSize = true;
-            this.sliderVal.Location = new System.Drawing.Point(200, 18);
+            this.sliderVal.Location = new System.Drawing.Point(165, 18);
             this.sliderVal.Name = "sliderVal";
             this.sliderVal.Size = new System.Drawing.Size(16, 17);
             this.sliderVal.TabIndex = 3;
@@ -176,7 +176,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 18);
+            this.label2.Location = new System.Drawing.Point(121, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 2;
@@ -247,14 +247,14 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "COM Port:";
             // 
-            // label5
+            // sliderNameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(108, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "null";
+            this.sliderNameLabel.AutoSize = true;
+            this.sliderNameLabel.Location = new System.Drawing.Point(108, 3);
+            this.sliderNameLabel.Name = "sliderNameLabel";
+            this.sliderNameLabel.Size = new System.Drawing.Size(30, 17);
+            this.sliderNameLabel.TabIndex = 5;
+            this.sliderNameLabel.Text = "null";
             // 
             // label4
             // 
@@ -312,7 +312,7 @@
             // 
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.sliderNameLabel);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.comport_label);
             this.tabPage2.Controls.Add(this.label7);
@@ -328,15 +328,6 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(288, 17);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "___________________________________";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -345,6 +336,15 @@
             this.label11.Size = new System.Drawing.Size(11, 153);
             this.label11.TabIndex = 11;
             this.label11.Text = "|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|\r\n|";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(288, 17);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "___________________________________";
             // 
             // label12
             // 
@@ -383,7 +383,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label sliderNameLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label sliderVal;
         private System.Windows.Forms.Label label2;
